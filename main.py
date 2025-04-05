@@ -19,7 +19,7 @@ def show_dogs():
     <html>
         <head><title>Random Dog Image</title></head>
         <body>
-            <img src="{image_url}", alt='Dog Image'/>
+            <img src="{image_url}" alt='Dog Image' width='300'/>
         </body>
     </html>"""
 
@@ -34,7 +34,7 @@ def show_cats():
     <html>
         <head><title>Random Cat Image</title></head>
         <body>
-            <img src="{image_url}", alt='Cat Image'/>
+            <img src="{image_url}" alt='Cat Image' width='300'/>
         </body>
     </html>"""
 
@@ -54,10 +54,10 @@ def show_animals():
         <head><title>Random Cat and Dog Image</title></head>
         <body>
             <h1>This is a cat</h1>
-            <img src="{image_cat}", alt='Cat Image'/>
+            <img src="{image_cat}" alt='Cat Image' width = '300' />
 
             <h1>This is a dog</h1>
-            <img src="{image_dog}", alt='Dog Image'/>
+            <img src="{image_dog}" alt='Dog Image' width='300'/>
         </body>
     </html>"""
     
