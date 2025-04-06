@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Random Cat and Dog Image</title>
+        <style>
+            .outer {
+                display: flex; 
+                justify-content: space-around;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> You have been nice, here enjoy an image of a cute cat and dog. </h1>
+        <div class="outer">
+            <div>
+                <h1>This is a cat</h1>
+                <img src="{{image_cat}}" alt='Cat Image' width = '300' height="400" />
+                <form action="/vote" method="post">
+                    <input type="hidden" name="animal" value="cat"><br>
+                    <button type="submit">Vote Cat!</button>
+                </form> <br>
+                <p>Cute Cat Votes: {{ cat_votes }}</p>
+                
+            </div>
+            
+            <div>
+                <h1>This is a dog</h1>
+                <img src="{{image_dog}}" alt='Dog Image' width='300' height="400"/>
+                <form action="/vote" method="post">
+                    <input type="hidden" name="animal" value="dog"><br>
+                    <button type="submit">Vote Dog!</button>
+                </form> <br>
+                <p>Cute Dog Votes: {{ dog_votes }}</p>
+                
+            </div>
+        </div>
+    </body>
+</html>

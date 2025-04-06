@@ -1,0 +1,25 @@
+<html>
+    <head><title>Weather Report</title></head>
+        
+    <form action="/weather/" method="get">
+        <h2>Enter the city whoose weather conditions you would like to check</h2>
+        <input type="text" name="city" placeholder="City"><br><br>
+        <button type="submit">Check</button>
+    </form>
+
+    {% if city and not error %}
+    <div>
+        The weather conditions of {{city}} are: <br><br>
+        Temperature: {{temp}} deg C <br>
+        Humidity: {{hum}}% <br>
+        Sea Level: {{sea_level}} Pa <br>
+        Wind Speed: {{wind_speed}} km/h <br>
+    </div>
+    {% endif %}
+
+    {% if error %}
+    <div style="color:red;">
+        {{error}}
+    </div>
+    {% endif %}
+</html>
